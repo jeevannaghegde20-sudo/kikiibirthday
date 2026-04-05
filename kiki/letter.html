@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>A Letter for Kiki 🤍💌</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ff9a9e, #fbc2eb, #a6c1ff);
+      background-size: 200% 200%;
+      animation: gradientShift 12s ease infinite;
+      font-family: 'Merriweather', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* floating hearts & butterflies */
+    .floating-heart {
+      position: fixed;
+      font-size: 24px;
+      pointer-events: none;
+      z-index: 1;
+      animation: floatHeart 12s linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes floatHeart {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      20% { opacity: 0.8; }
+      80% { opacity: 0.8; }
+      100% { transform: translateY(-10vh) rotate(20deg); opacity: 0; }
+    }
+
+    .butterfly {
+      position: fixed;
+      font-size: 32px;
+      animation: flyButterfly 22s linear infinite;
+      filter: drop-shadow(0 0 6px #00b4d8);
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes flyButterfly {
+      0% { transform: translateX(-10vw) translateY(10vh) rotate(0deg); opacity: 0.9; }
+      50% { transform: translateX(60vw) translateY(-5vh) rotate(20deg); }
+      100% { transform: translateX(110vw) translateY(15vh) rotate(40deg); opacity: 0; }
+    }
+
+    /* letter card - colorful with glow */
+    .card {
+      background: rgba(255, 255, 245, 0.96);
+      padding: 45px;
+      border-radius: 60px 25px 60px 25px;
+      max-width: 850px;
+      width: 100%;
+      box-shadow: 0 30px 50px rgba(0,0,0,0.3), 0 0 0 4px rgba(255,215,0,0.5), 0 0 0 8px rgba(255,100,100,0.3);
+      animation: fadeIn 1s ease, borderPulse 2s infinite;
+      backdrop-filter: blur(2px);
+      z-index: 2;
+      transition: all 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes borderPulse {
+      0% { box-shadow: 0 30px 50px rgba(0,0,0,0.3), 0 0 0 4px rgba(255,215,0,0.5), 0 0 0 8px rgba(255,100,100,0.3); }
+      50% { box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 0 6px rgba(255,215,0,0.8), 0 0 0 12px rgba(255,100,100,0.5); }
+      100% { box-shadow: 0 30px 50px rgba(0,0,0,0.3), 0 0 0 4px rgba(255,215,0,0.5), 0 0 0 8px rgba(255,100,100,0.3); }
+    }
+
+    /* heading */
+    h1 {
+      font-family: 'Caveat', cursive;
+      font-size: 48px;
+      text-align: center;
+      background: linear-gradient(135deg, #c44569, #ff6b6b, #f9ca24);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* letter text */
+    .letter-content {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #2c3e50;
+      text-align: justify;
+    }
+    .letter-content p {
+      margin-bottom: 1.3em;
+      background: rgba(255, 250, 210, 0.4);
+      padding: 8px 12px;
+      border-radius: 30px;
+      transition: 0.2s;
+    }
+    .letter-content p:hover {
+      background: rgba(255, 240, 150, 0.7);
+      transform: scale(1.01);
+    }
+
+    /* signature */
+    .sign {
+      margin-top: 35px;
+      text-align: right;
+      font-family: 'Caveat', cursive;
+      font-size: 32px;
+      background: linear-gradient(135deg, #9b5e2c, #e07a5f);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      border-top: 2px solid #ffd166;
+      padding-top: 20px;
+    }
+
+    /* button */
+    .btn {
+      display: block;
+      margin: 40px auto 0;
+      padding: 14px 35px;
+      border: none;
+      border-radius: 60px;
+      background: linear-gradient(135deg, #ff4d6d, #ff9a3c);
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+      animation: buttonGlow 1.5s infinite alternate;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff1e4d, #ff802e);
+    }
+    @keyframes buttonGlow {
+      0% { box-shadow: 0 8px 18px rgba(0,0,0,0.2); }
+      100% { box-shadow: 0 0 20px rgba(255,100,100,0.8); }
+    }
+
+    @media (max-width: 650px) {
+      .card { padding: 28px; }
+      h1 { font-size: 36px; }
+      .letter-content { font-size: 16px; }
+      .sign { font-size: 26px; }
+      .btn { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- floating hearts (many) -->
+<div class="floating-heart" style="left: 10%; animation-duration: 8s; animation-delay: 0s;">❤️</div>
+<div class="floating-heart" style="left: 25%; animation-duration: 10s; animation-delay: 2s;">💖</div>
+<div class="floating-heart" style="left: 40%; animation-duration: 7s; animation-delay: 4s;">💗</div>
+<div class="floating-heart" style="left: 55%; animation-duration: 11s; animation-delay: 1s;">💕</div>
+<div class="floating-heart" style="left: 70%; animation-duration: 9s; animation-delay: 5s;">💓</div>
+<div class="floating-heart" style="left: 85%; animation-duration: 12s; animation-delay: 3s;">💝</div>
+<div class="floating-heart" style="left: 15%; animation-duration: 13s; animation-delay: 6s;">💘</div>
+<div class="floating-heart" style="left: 65%; animation-duration: 8s; animation-delay: 7s;">💖</div>
+
+<!-- butterflies -->
+<div class="butterfly" style="top: 15%; animation-duration: 22s;">🦋</div>
+<div class="butterfly" style="top: 40%; animation-duration: 28s; animation-delay: 3s;">🦋</div>
+<div class="butterfly" style="top: 65%; animation-duration: 18s; animation-delay: 6s;">🦋</div>
+<div class="butterfly" style="top: 85%; animation-duration: 25s; animation-delay: 2s;">🦋</div>
+
+<div class="card">
+  <h1>💌 A Letter I Never Said Out Loud</h1>
+
+  <div class="letter-content">
+    <p>Kiki… 🤍</p>
+    <p>I don’t even know where to start, because there’s honestly so much I feel when it comes to you.</p>
+    <p>From the very first time we met while playing a game in drama practice to all the moments like bandhipur, class trip, temple run, Mumbai trip, that (cab ride 😅), and Goa… every memory with you stayed with me 💫</p>
+    <p>You are someone I admire deeply… your strength, your patience, everything about you 🌸</p>
+    <p>I may not always express things well… but I feel everything more than I show.</p>
+    <p>And maybe… this is something I never said — I tried to be there for you in my own way 🤍 And sometimes, when I didn’t feel you there… it stayed with me a little.</p>
+    <p>But even then… nothing changed how I see you.</p>
+    <p>I don’t need anything big… just your presence, your honesty, and those simple moments ✨</p>
+    <p>At the end of everything… I just want you to be happy 🤍</p>
+    <p>Because honestly… there’s no version of you that I wouldn’t choose 🌼</p>
+    <p>Happy Birthday, Kiki 🎂💖<br>You’ll always be special to me 🦋</p>
+  </div>
+
+  <div class="sign">— Bittu 🤍</div>
+
+  <button class="btn" onclick="goNext()">✨ Finish ✨</button>
+</div>
+
+<script>
+  // Navigation to celebration page (page 2)
+  function goNext() {
+    window.location.href = "celebration.html";
+  }
+</script>
+</body>
+</html>

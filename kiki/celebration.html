@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>For My Kiki ✨🎓💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(circle at top left, #ffdde1, #ee9ca7);
+      overflow-x: hidden;
+      position: relative;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 24 27"><polygon points="2,2 22,13 12,16 2,25" fill="%23ff4d6d" stroke="%23fff" stroke-width="1.5"/><circle cx="7" cy="9" r="1.5" fill="white"/></svg>') 4 4, auto;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(45deg, rgba(255,255,200,0.2) 0px, rgba(255,255,200,0.2) 2px, transparent 2px, transparent 8px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container { position: relative; z-index: 10; padding: 20px 20px 40px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    
+    /* LIGHT YELLOW BALLOONS */
+    .balloon {
+      position: fixed;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,250,210,0.95), rgba(255,240,150,0.9));
+      border-radius: 50% 50% 50% 50%;
+      box-shadow: inset -5px -5px 10px rgba(0,0,0,0.05), 0 6px 12px rgba(0,0,0,0.1);
+      animation: floatUp 8s linear infinite;
+      cursor: pointer;
+      transition: transform 0.1s;
+      z-index: 999;
+    }
+    .balloon::after { content: "✧"; position: absolute; bottom: -18px; left: 28px; font-size: 18px; color: #d4a373; text-shadow: 0 1px 0 #fff; }
+    .balloon:active { transform: scale(0.9); opacity: 0.8; }
+    @keyframes floatUp {
+      0% { transform: translateX(0) translateY(0) rotate(0deg); opacity: 1; }
+      70% { opacity: 1; }
+      100% { transform: translateX(40px) translateY(-110vh) rotate(15deg); opacity: 0; }
+    }
+    .balloon:nth-child(1) { background: radial-gradient(circle at 30% 30%, #FFFACD, #FFE4B5); left: 5%; width: 55px; height: 72px; animation-duration: 9s; animation-delay: 0s; }
+    .balloon:nth-child(2) { background: radial-gradient(circle at 30% 30%, #FFF8DC, #FFEFD5); left: 20%; width: 70px; height: 88px; animation-duration: 11s; animation-delay: 2s; }
+    .balloon:nth-child(3) { background: radial-gradient(circle at 30% 30%, #FAFAD2, #FDF5E6); left: 45%; width: 62px; height: 78px; animation-duration: 7.5s; animation-delay: 1s; }
+    .balloon:nth-child(4) { background: radial-gradient(circle at 30% 30%, #FFFFE0, #FFF0F5); left: 70%; width: 68px; height: 85px; animation-duration: 10s; animation-delay: 4s; }
+    .balloon:nth-child(5) { background: radial-gradient(circle at 30% 30%, #FFF5EE, #FFE4B5); left: 88%; width: 52px; height: 68px; animation-duration: 12s; animation-delay: 0.5s; }
+    .balloon:nth-child(6) { background: radial-gradient(circle at 30% 30%, #FFFACD, #FFDAB9); left: 60%; width: 75px; height: 95px; animation-duration: 8.2s; animation-delay: 6s; }
+    .balloon:nth-child(7) { background: radial-gradient(circle at 30% 30%, #FFF8DC, #FFE4B5); left: 15%; width: 48px; height: 60px; animation-duration: 9.5s; animation-delay: 3s; }
+    .balloon:nth-child(8) { background: radial-gradient(circle at 30% 30%, #FDF5E6, #FFFACD); left: 82%; width: 66px; height: 82px; animation-duration: 10.5s; animation-delay: 7s; }
+    
+    /* SIDE CAKES & SWEETS */
+    .side-deco {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      z-index: 20;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+    .side-deco.left { left: 15px; }
+    .side-deco.right { right: 15px; }
+    @keyframes floatCake { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+    .side-deco span { animation: floatCake 3s ease-in-out infinite; display: inline-block; text-shadow: 2px 2px 8px rgba(0,0,0,0.2); cursor: default; transition: transform 0.2s; }
+    .side-deco span:hover { transform: scale(1.2); pointer-events: auto; }
+    .side-deco span:nth-child(odd) { animation-delay: 0.5s; }
+    .side-deco span:nth-child(even) { animation-delay: 1.2s; }
+
+    h1 {
+      font-size: 54px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #FFD166, #F9B23F, #FF6B6B);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 20px 0 10px;
+    }
+    h1::before { content: "💖 "; }
+    h1::after { content: " 💝"; }
+
+    .photos { display: flex; justify-content: center; gap: 30px; margin: 40px 0; flex-wrap: wrap; }
+    .photo-card { background: rgba(255,248,225,0.8); padding: 12px; border-radius: 35px; box-shadow: 0 20px 30px rgba(0,0,0,0.3); backdrop-filter: blur(4px); transition: transform 0.3s; border: 3px solid gold; }
+    .photo-card:hover { transform: scale(1.02) rotate(1deg); border-color: #ffb347; }
+    .photos img { width: 280px; height: 350px; object-fit: cover; border-radius: 28px; display: block; }
+
+    /* NOTE - YELLOW BACKGROUND, BOLD DARK TEXT */
+    .note {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #ffecb3;  /* bright yellow background */
+      backdrop-filter: none;
+      padding: 30px 35px;
+      border-radius: 65px 25px 65px 25px;
+      font-size: 20px;
+      font-weight: 900;      /* extra bold */
+      line-height: 1.7;
+      color: #2c1a0a;        /* dark brown, readable */
+      text-shadow: none;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+      border-left: 8px solid #ffb347;
+      border-right: 8px solid #ff6b6b;
+    }
+    .note p {
+      margin: 18px 0;
+      letter-spacing: 0.5px;
+    }
+
+    /* LINK STYLED AS BUTTON */
+    .footer-link {
+      font-size: 28px;
+      font-weight: 900;
+      background: radial-gradient(circle, #f9ca24, #f0932b);
+      display: inline-block;
+      padding: 12px 32px;
+      border-radius: 50px;
+      color: white;
+      margin-top: 20px;
+      box-shadow: 0 5px 0 #d63031;
+      cursor: pointer;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .footer-link:hover {
+      transform: scale(1.02);
+      background: radial-gradient(circle, #ffb347, #ff6b6b);
+    }
+
+    @media (max-width: 650px) {
+      h1 { font-size: 40px; }
+      .photos img { width: 220px; height: 280px; }
+      .note { font-size: 17px; padding: 20px; }
+      .footer-link { font-size: 22px; }
+      .balloon { width: 40px; height: 55px; }
+      .balloon::after { left: 18px; font-size: 12px; }
+      .side-deco { font-size: 32px; gap: 20px; }
+      .side-deco.left { left: 5px; }
+      .side-deco.right { right: 5px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div>
+<div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div>
+
+<div class="side-deco left"><span>🍰</span><span>🧁</span><span>🍪</span><span>🍩</span><span>🍫</span><span>💝</span></div>
+<div class="side-deco right"><span>🎂</span><span>🍬</span><span>🍭</span><span>🧸</span><span>🌸</span><span>💌</span></div>
+
+<div class="container">
+  <h1>For My Kiki ❤️‍🔥</h1>
+  <div class="photos">
+    <div class="photo-card"><img src="freshers.jpg" alt="Freshers Day 🎓" onerror="this.src='https://via.placeholder.com/280x350?text=❤️+Freshers+Memory'"></div>
+    <div class="photo-card"><img src="graduation.jpeg" alt="Graduation Day 🎉" onerror="this.src='https://via.placeholder.com/280x350?text=✨+Grad+Day+✨'"></div>
+  </div>
+  <div class="note">
+    <p>🎈✨ From that first picture on <strong>Freshers’ Day</strong>… to this one on <strong>Graduation Day</strong>… 🎓💃</p>
+    <p>💞 I never imagined that the girl standing next to me would become such an important part of my life. 🥹💖</p>
+    <p>📸 Back then, it was just a photo… just a moment. But today, it’s a memory filled with <strong>laughter 😂, trust 🤝, playful fights 😤💢, care 🤗, and countless unforgettable moments 🌟🎆.</strong></p>
+    <p>💌 Kiki, somewhere between those two pictures, you became my <strong>safe place 🏡, my biggest support 🦸‍♀️, and the person I can never replace 🔐❤️.</strong></p>
+    <p>🌱 We didn’t just grow in college… we grew into a <strong>bond 💞</strong> that I know will last forever. ♾️</p>
+    <p>🎢 Through all the stress, fun, madness, and memories — <strong>you were always there.</strong> And that means more than anything. 🥺🏆</p>
+    <p>🗣️ I really don’t say this enough… but <strong>I truly love you ❤️‍🔥</strong> Not just as a best friend, but as someone who became family. 👩‍❤️‍👩✨</p>
+    <p>👣 From strangers… to best friends… to <strong>forever people.</strong> 🦋💫</p>
+    <p>🌍 No matter where life takes us after this, one thing will never change — <strong>you will always be my Kiki 🤍💖</strong></p>
+    <p>🙏 Thank you for everything. For being <strong>YOU</strong> — magical, real, and irreplaceable. ✨🌈</p>
+  </div>
+  <!-- SIMPLE LINK - 100% REDIRECT -->
+  <a href="gallery.html" class="footer-link">Forever Yours 💖🌹</a>
+</div>
+
+<canvas id="confettiCanvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999;"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+<script>
+  function confettiBurst(originX=0.5, originY=0.5) {
+    canvasConfetti({ particleCount: 180, spread: 100, origin: { x: originX, y: originY }, startVelocity: 20, colors: ['#ff0a54','#ff7096','#ffb3c6','#ffd60a','#06ffa5','#3a86ff'], decay: 0.9 });
+    canvasConfetti({ particleCount: 60, spread: 55, origin: { x: originX, y: originY }, startVelocity: 30, colors: ['#f9d423','#ff4e50','#f9f3b0'] });
+  }
+  window.addEventListener('load', () => {
+    setTimeout(() => { confettiBurst(0.3,0.4); confettiBurst(0.7,0.5); }, 500);
+  });
+  document.querySelectorAll('.balloon').forEach(ball => {
+    ball.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const rect = ball.getBoundingClientRect();
+      const x = (rect.left+rect.width/2)/window.innerWidth;
+      const y = (rect.top+rect.height/2)/window.innerHeight;
+      canvasConfetti({ particleCount: 60, spread: 45, origin: { x, y }, colors: ['#f7d44a','#ff8c42','#ff3f6b'] });
+      ball.style.opacity = '0'; ball.style.transform = 'scale(0.2)';
+      setTimeout(() => { ball.style.opacity = ''; ball.style.transform = ''; }, 300);
+      try {
+        const ctx = new (window.AudioContext||window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.frequency.value = 1200; gain.gain.value = 0.1;
+        osc.start(); gain.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime+0.2);
+        osc.stop(ctx.currentTime+0.2);
+      } catch(e) {}
+    });
+  });
+  setInterval(() => { if(document.hasFocus()) canvasConfetti({ particleCount:40, spread:55, origin:{ y:0.8, x:Math.random() }, startVelocity:12, colors:['#ffb347','#ff6b6b','#4ecdc4'] }); }, 17000);
+  setInterval(() => { confettiBurst(Math.random(),0.85); }, 30000);
+</script>
+</body>
+</html>
